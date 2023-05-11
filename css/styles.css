@@ -280,8 +280,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-container {
-    align-items: center;
-    max-width: 526px;
+    max-width: 582px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -322,7 +321,7 @@ body {
 .footer-text {
   max-width: 268px;
   margin: 0 auto;
-
+  text-align: start;
   color: #f4f4fd;
 
   line-height: 1.5;
@@ -607,7 +606,8 @@ body {
 }
 @media only screen and (min-width: 1158px) {
   .hero {
-    padding: 117px 0 188px 0;
+    max-width: 1440px;
+    padding: 188px 0 292px 0;
   }
 }
 
@@ -735,11 +735,15 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
 
   color: var(--secondary-color-text);
+}
+@media only screen and (max-width: 767px) {
+  .advantages-title {
+    text-align: center;
+  }
 }
 @media only screen and (min-width: 1158px) {
   .advantages-title {
@@ -1029,7 +1033,7 @@ body {
 }
 @media only screen and (min-width: 1158px) {
   .list-cards {
-    justify-content:center;
+    justify-content: center;
     row-gap: 69px;
   }
 }
@@ -1040,7 +1044,7 @@ body {
   .list-card {
     --items: 2;
     flex-basis: calc(100% / var(--items) - var(--retreat) * (var(--items) - 1));
-	 flex-grow: 1;
+    flex-grow: 1;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -1145,8 +1149,8 @@ body {
   padding: 72px 24px 24px 24px;
   opacity: 1;
 
-  width: 408px;
-  height: 584px;
+  width: 392px;
+  height: 586px;
 
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -1156,6 +1160,12 @@ body {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 300ms var(--timing-function) 300ms,
     opacity 300ms var(--timing-function) 300ms;
+}
+@media only screen and (max-width: 420px) {
+  .modal {
+    width: 100%;
+	 height: 100%;
+  }
 }
 .close-modal {
   position: absolute;
@@ -1202,8 +1212,18 @@ body {
 
   color: var(--secondary-color-text);
 }
+@media only screen and (max-width: 390px) {
+   .modal-title{
+	 font-size: 14px;
+  }
+}
+@media only screen and (max-width: 350px) {
+   .modal-title{
+	 font-size: 12px;
+  }
+}
 .modal-form-label {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .modal-form-title {
   font-size: 12px;
@@ -1294,6 +1314,21 @@ body {
 
   color: #8e8f99;
 }
+@media only screen and (max-width: 420px) {
+   .modal-label-policy{
+		margin-bottom: 45px;
+  }
+}
+@media only screen and (max-width: 390px) {
+   .modal-label-policy{
+	font-size: 10px;
+  }
+}
+@media only screen and (max-width: 350px) {
+   .modal-label-policy{
+	font-size: 9px;
+  }
+}
 .form-link-policy {
   font-size: 12px;
   line-height: 1.33;
@@ -1301,6 +1336,11 @@ body {
 
   color: var(--accent-color);
   text-decoration-line: underline;
+}
+@media only screen and (max-width: 390px) {
+   .form-link-policy{
+	 font-size: 10px;
+  }
 }
 .modal-form-chackbox {
   display: flex;
@@ -1420,7 +1460,7 @@ body {
 
 .mobile-menu {
 }
-.mobile-item {
+.mobile-item:not(:last-child) {
   margin-bottom: 40px;
 }
 .mobile-link {
@@ -1443,6 +1483,9 @@ body {
 .menu-contacts {
   margin-bottom: 48px;
 }
+.menu-contacts-item {
+  margin-bottom: 40px;
+}
 
 .menu-contacts-link {
   font-weight: 500;
@@ -1458,8 +1501,6 @@ body {
   color: var(--accent-color);
 }
 .menu-contacts-link-mod {
-  margin-bottom: 40px;
-
   display: block;
   max-width: 353px;
 
@@ -1491,13 +1532,12 @@ body {
 }
 
 .mobile-menu-icons {
+  display: flex;
   gap: 40px;
-  justify-content: space-between;
-  max-width: 328px;
 }
 @media only screen and (max-width: 350px) {
   .mobile-menu-icons {
-    gap: 20px;
+    gap: 30px;
   }
 }
 
