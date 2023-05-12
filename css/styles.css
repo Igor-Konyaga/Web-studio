@@ -607,7 +607,7 @@ body {
 @media only screen and (min-width: 1158px) {
   .hero {
     max-width: 1440px;
-    padding: 188px 0 292px 0;
+    padding: 188px 0;
   }
 }
 
@@ -939,11 +939,7 @@ body {
 
 /* ========================== Portfolio Page ======================== */
 /* =========== Section Portfolio =========== */
-.potrfolio-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .potrfolio {
   padding: 48px 0;
 }
@@ -954,21 +950,12 @@ body {
 }
 @media only screen and (min-width: 1158px) {
   .potrfolio {
-    padding: 0 0 61px 0;
+    padding: 100px 0 120px 0;
   }
 }
-@media only screen and (max-width: 1157px) {
-  .header-portfolio {
-    display: none;
-  }
-}
-@media only screen and (min-width: 1158px) {
-  .header-portfolio-page {
-    display: none;
-  }
-}
+
 .filters-list {
-  margin-bottom: 48px;
+margin-bottom: 48px;
 
   display: flex;
   gap: 24px;
@@ -976,13 +963,14 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .filters-list {
-    margin-bottom: 64px;
+	 margin-bottom: 64px;
     flex-wrap: nowrap;
+	 justify-content: center;
   }
 }
 @media only screen and (min-width: 1158px) {
   .filters-list {
-    margin-bottom: 138px;
+	 margin-bottom: 72px;
   }
 }
 
@@ -1038,7 +1026,7 @@ body {
   }
 }
 .list-card {
-  flex-basis: calc(100% - 30px);
+  flex-basis: 100%;
 }
 @media only screen and (min-width: 768px) {
   .list-card {
@@ -1070,7 +1058,20 @@ body {
   position: relative;
   overflow: hidden;
 }
-
+.list-card-img{
+	width: 100%;
+	max-width: 396px;
+}
+@media only screen and (min-width: 768px) {
+   .list-card-img{
+	 max-width: 356px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+   .list-card-img{
+	 max-width: 360px;
+  }
+}
 .overlay {
   position: absolute;
   left: 0;
@@ -1150,7 +1151,6 @@ body {
   opacity: 1;
 
   width: 392px;
-  height: 586px;
 
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -1164,7 +1164,6 @@ body {
 @media only screen and (max-width: 420px) {
   .modal {
     width: 100%;
-	 height: 100%;
   }
 }
 .close-modal {
